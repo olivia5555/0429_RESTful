@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<button id="btnGet">取得天氣資料</button>
+<div id="result"></div>
+<script>
+btnGet.onclick = function(){
+
+  var xhr = new XMLHttpRequest();
+  xhr.onload = function(){
+var x = new DOMParser();
+var pika= x.parseFromString(xhr.responseText,"application/xml")
+
+var data = pika.querySelectorAll('locationName+weatherElement')
+console.log(data[0]);
+
+  }
+
+  xhr.open('GET','../_file/F-C0032-001.xml');
+  xhr.send();
+}
+
+
+</script>
+
+</body>
+</html>

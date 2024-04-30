@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let data = ["apple", "bee", "cat", "dog", "egg"];
+
+      //V1 :
+      console.log(data[0]);
+      console.log(data[1]);
+      console.log(data[2]);
+
+      //V2:
+      for (var k = 0; k < data.length; k++) {
+        console.log(data[k]);
+      }
+
+      //V3:for (變數 of 陣列)
+      for (const fish of data) {
+        console.log(fish);
+      }
+
+      //V4:
+      for (let x in data) {
+        console.log(data[x]);
+      }
+
+      //V5:
+      $.each(data, (index, element) => {
+        console.log(element);
+      });
+
+      //V6:
+      data.forEach((x) => {
+        console.log(x);
+      });
+    </script>
+  </body>
+</html>

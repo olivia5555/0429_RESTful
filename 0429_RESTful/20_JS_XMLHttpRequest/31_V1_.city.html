@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <button id="btnGet">取得天氣資料</button>
+    <select id="mylist">
+      
+        
+    </select>
+    <div id="result"></div>
+<script>
+    btnGet.onclick = function(){
+
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function(){
+            var data = xhr.responseText;
+
+            var x = new DOMParser();
+            var pika = x.parseFromString(data,"application/xml");
+            var city = pika.getElementsByTagName('locationName')
+            
+   
+
+           var zoo = Array.from(city);
+           console.log(zoo);
+           zoo.forEach((x,index)=>{var opt = document.createElement('option');
+           opt.value = index;
+        //    opt.innerText = x.innerHTML;
+        opt.text = x.innerHTML;
+
+           document.getElementById('mylist').append(opt);})
+            
+         
+      }
+        xhr.open('GET','../_file/F-C0032-001.xml')
+        xhr.send();
+    }
+//讀取 XNL 檔案
+//XML 檔案中有 locationName 標籤
+//locationName 標籤包含的內容放到下拉選單中
+
+
+</script>
+
+</body>
+</html>

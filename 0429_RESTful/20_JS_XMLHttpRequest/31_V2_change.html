@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select id="mylist" onchange="apple(this.selectedIndex)">
+      <option value="0">台北</option>
+      <option value="1">台中</option>
+      <option value="2">台南</option>
+    </select>
+    <div id="result"></div>
+
+    <script>
+      function apple(x) {
+        console.log(x);
+
+        var y = document.getElementById('mylist')
+        console.log(y[x].text);
+        console.log(y[x].value);
+
+        result.innerText = y[x].text
+      }
+    </script>
+  </body>
+</html>

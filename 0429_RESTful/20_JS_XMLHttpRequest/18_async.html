@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <button id="btnGetFileT">讀取文字檔 async 參數為 true (非同步)</button>
+    <button id="btnGetFileF">讀取文字檔 async 參數為 false(同步)</button>
+    <hr />
+    <main>
+      <div id="divLeft"></div>
+      <div id="divRight"></div>
+    </main>
+
+    <script>
+      //  #divLeft  顯示 ../_file/bigfile.txt   文字檔資料
+      //  #divRight 顯示 ../_file/smallfile.txt 文字檔資料
+
+      // 10. 先讀取 bigfile.txt ， 後讀取 smallfile.txt
+      //     測試 async 參數為 true (非同步)
+//
+function GetTextFile(element,filePath){
+let xhr = new XMLHttpRequest();
+xhr.onload = function(){
+    
+    element.innerText = xhr.responseText;
+}
+xhr.open('GET',filePath,true);
+xhr.send();
+}
+
+
+
+      btnGetFileT.onclick = function () {
+        GetTextFile(divLeft,'../_file/bigfile.txt')
+        GetTextFile(divRight,'../_file/smallfile.txt')
+        // var apple = new XMLHttpRequest();
+        // apple.onload = function () {
+        //   divLeft.innerText = apple.responseText;
+        // };
+        // apple.open("GET", "../_file/bigfile.txt",false);
+        // apple.send();
+
+
+        // var bee = new XMLHttpRequest();
+        // bee.onload = function () {
+        //   divRight.innerText = bee.responseText;
+        // };
+        // bee.open("GET", "../_file/smallfile.txt");
+        // bee.send();
+      };
+
+      // 20. 先讀取 bigfile.txt ， 後讀取 smallfile.txt
+      //     測試 async 參數為 false (同步)
+      btnGetFileF.onclick = function () {};
+    </script>
+  </body>
+</html>

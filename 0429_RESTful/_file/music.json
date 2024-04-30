@@ -1,0 +1,110 @@
+[
+    {
+        "version": "1.4",
+        "UID": "65f1dc6573f77c88e8dfb1b7",
+        "title": "KSAF《幻影宇宙》米娃．瑪崔克多媒體劇場",
+        "category": "5",
+        "showInfo": [
+            {
+                "time": "2024/06/15 15:00:00",
+                "location": "高雄市苓雅區五福一路67號",
+                "locationName": "高雄市文化中心至善廳",
+                "onSales": "Y",
+                "price": "",
+                "latitude": "22.6259044",
+                "longitude": "120.3171311",
+                "endTime": "2024/06/15 16:05:00"
+            },
+            {
+                "time": "2024/06/15 18:00:00",
+                "location": "高雄市苓雅區五福一路67號",
+                "locationName": "高雄市文化中心至善廳",
+                "onSales": "Y",
+                "price": "",
+                "latitude": "22.6259044",
+                "longitude": "120.3171311",
+                "endTime": "2024/06/15 19:05:00"
+            }
+        ],
+        "showUnit": "",
+        "discountInfo": "",
+        "descriptionFilterHtml": "",
+        "imageUrl": "",
+        "masterUnit": [],
+        "subUnit": [],
+        "supportUnit": [],
+        "otherUnit": [],
+        "webSales": "https://www.opentix.life/program/1764850361731936257",
+        "sourceWebPromote": "https://www.opentix.life/program/1764850361731936257",
+        "comment": "",
+        "editModifyDate": "",
+        "sourceWebName": "OPENTIX兩廳院文化生活",
+        "startDate": "2024/06/15",
+        "endDate": "2024/06/15",
+        "hitRate": 13
+    },
+    {
+        "version": "1.4",
+        "UID": "65f47f4c73f77c88e8dfb260",
+        "title": "《失重計劃III：摺疊震盪》",
+        "category": "5",
+        "showInfo": [
+            {
+                "time": "2024/06/28 19:30:00",
+                "location": "臺北市中正區羅斯福路四段92號10樓",
+                "locationName": "水源劇場",
+                "onSales": "Y",
+                "price": "",
+                "latitude": "25.0135771",
+                "longitude": "121.5350643",
+                "endTime": "2024/06/28 20:30:00"
+            },
+            {
+                "time": "2024/06/29 14:30:00",
+                "location": "臺北市中正區羅斯福路四段92號10樓",
+                "locationName": "水源劇場",
+                "onSales": "Y",
+                "price": "",
+                "latitude": "25.0135771",
+                "longitude": "121.5350643",
+                "endTime": "2024/06/29 15:30:00"
+            },
+            {
+                "time": "2024/06/29 19:30:00",
+                "location": "臺北市中正區羅斯福路四段92號10樓",
+                "locationName": "水源劇場",
+                "onSales": "Y",
+                "price": "",
+                "latitude": "25.0135771",
+                "longitude": "121.5350643",
+                "endTime": "2024/06/29 20:30:00"
+            },
+            {
+                "time": "2024/06/30 14:30:00",
+                "location": "臺北市中正區羅斯福路四段92號10樓",
+                "locationName": "水源劇場",
+                "onSales": "Y",
+                "price": "",
+                "latitude": "25.0135771",
+                "longitude": "121.5350643",
+                "endTime": "2024/06/30 15:30:00"
+            }
+        ],
+        "showUnit": "",
+        "discountInfo": "",
+        "descriptionFilterHtml": "",
+        "imageUrl": "",
+        "masterUnit": [],
+        "subUnit": [],
+        "supportUnit": [],
+        "otherUnit": [],
+        "webSales": "https://www.opentix.life/program/1767073590921740288",
+        "sourceWebPromote": "https://www.opentix.life/program/1767073590921740288",
+        "comment": "",
+        "editModifyDate": "",
+        "sourceWebName": "OPENTIX兩廳院文化生活",
+        "startDate": "2024/06/28",
+        "endDate": "2024/06/30",
+        "hitRate": 21
+    }
+]
