@@ -19,6 +19,29 @@
         //      * Promise.catch(function(err){});
         //      ----
         //      * Promise.then(function(success){}, function(fail){});
+
+        let apple = new Promise(function(x,y){
+            var url = "https://reqres.in/api/users?page=2";
+            $.get(url, function (data) {
+        if(data){
+            x(data);
+
+        }else{
+
+            y('查無資料');
+        }
+        });
+
+        });
+
+        apple.then(function(cat){
+            for (let t = 0; t < datafromserver.data.length; t++) {
+            // console.log(datafromserver.data[t].email);
+            // console.log(datafromserver.data[t].avatar);
+            $("#apple").append(`
+            <div class="col-sm-6 col-lg-2"><img src="${datafromserver.data[t].avatar}" alt=""}>
+<p>${datafromserver.data[t].email}</p></div>`);
+        })
     </script>
 </body>
 

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <script src="../_js/jquery-3.6.0.js"></script>
+    <script src="../_js/jquery-3.7.1.js"></script>
 </head>
 
 <body>
@@ -27,11 +27,22 @@
         btnAjax.onclick = function () {
 
             // 20. 觀察網頁顯示的資料結構 https://jsonplaceholder.typicode.com/todos
-            var url = 'https://jsonplaceholder.typicode.com/todos';
-            $.ajax(url)
-            .done(function (data) {
+            // var url = 'https://jsonplaceholder.typicode.com/todos';
+            $.ajax({url:'https://jsonplaceholder.typicode.com/todos',
+            method:'GET'
+        }).done(function (apple) {
                  // 30. 試著將 使用者編號為10號的待辦事項 顯示在網頁上
-                console.log("success");
+               apple.forEach(function(item ,index){
+                if(item.userId == 10){
+                 $('#divResult').append(`<p>
+                    <input type='checkbox'${(item.completed)?'checked':''}>
+                    ${item.userId}-
+                    ${item.id}-
+                    ${item.completed}-
+                    ${item.title}
+                    </p>`)
+                }
+               });
             })
         }
     </script>

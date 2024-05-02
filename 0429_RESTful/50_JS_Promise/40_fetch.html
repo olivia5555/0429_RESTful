@@ -12,8 +12,31 @@
     <script>
         // 10. 透過 fetch() 取得 https://reqres.in/api/login 的資料
 
+let url = "https://reqres.in/api/login";
+fetch(url).then(function(x){
+let y =x.json();
+
+y.then(function(z){
+    console.log(z.data[5].name);
+})
+})
+
+async function foo(){
+
+let p1 = await fetch(url);
+let p2 = await p1.json();
+console.log(p2.data[5].name);
+
+}
+foo()
         // 20. 透過 fetch() 進行 post 資料
         
+
+
+
+
+
+        //-----------------------------------------------------------------------
         // 30. 假設情境：需要登入後，才能取得訂單明細
         //  設計 login() 、 orderlist() 、 main() 
         //  並使用 Promise 搭配 setTimeout 來模擬

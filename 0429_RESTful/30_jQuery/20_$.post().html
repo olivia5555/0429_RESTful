@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <script src="../_js/jquery-3.6.0.js"></script>
+    <script src="../_js/jquery-3.7.1.js"></script>
 </head>
 
 <body>
@@ -12,6 +12,8 @@
     <h4>jQuery.post()</h4>
     <p><a href='https://api.jquery.com/jquery.post/'>https://api.jquery.com/jquery.post/</a></p>
     <hr>
+    <input id="userName" type="text">
+    <input id="userJob" type="text">
     <button id="btnPostData">寫入資料(測試)</button>
     <div id="divResult"></div>
 
@@ -22,6 +24,13 @@
             // 20. $.post(網址, {要寫入的資料} ,function(){})
             //      測試網址 https://reqres.in/api/users
             //      寫入成功後，網站會提示寫入成功時間
+            let url = "https://reqres.in/api/users";
+        $.post(url,{
+"name":$('#userName').val(),
+"job":$('#userJob').val(),
+        },function(data){
+console.log(data);
+        })
         
         }
 
