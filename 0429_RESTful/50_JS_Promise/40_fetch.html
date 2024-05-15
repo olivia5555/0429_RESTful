@@ -9,10 +9,11 @@
     <h4>Using Fetch</h4>
     <p><a href="https://developer.mozilla.org/zh-TW/docs/Web/API/Fetch_API/Using_Fetch">https://developer.mozilla.org/zh-TW/docs/Web/API/Fetch_API/Using_Fetch</a></p>
 
-    <script>
         // 10. 透過 fetch() 取得 https://reqres.in/api/login 的資料
+        //https://opendata.cwa.gov.tw/api/v1/rest/datastore/E-A0015-001?Authorization=rdec-key-123-45678-011121314
 
-let url = "https://reqres.in/api/login";
+    <script>
+    let url = "https://reqres.in/api/login";
 fetch(url).then(function(x){
 let y =x.json();
 
@@ -31,7 +32,22 @@ console.log(p2.data[5].name);
 foo()
         // 20. 透過 fetch() 進行 post 資料
         
+let data = {"email":"eve.holt@reqres.in",
+    "password":"cityslicka"
+}
 
+fetch(url,{
+    method:"POST",
+    body: JSON.stringify(data),
+    headers: {
+        "content-type":"application/json",
+    }
+}).then(function(x){
+    let y = x.json();
+    y.then(function(z){
+        console.log(z);
+    })
+})
 
 
 
